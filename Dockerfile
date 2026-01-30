@@ -21,10 +21,6 @@ COPY . .
 # Uncomment the following line in case you want to disable telemetry during the build.
 ENV NEXT_TELEMETRY_DISABLED=1
 
-ENV NEXT_PUBLIC_TANNY_ENV=production
-ENV NEXT_PUBLIC_GOOGLE_CLIENT_ID=784681444321-c0gc6j0cl4jgfmhiqhftgqidm191pbfh.apps.googleusercontent.com
-ENV NEXT_PUBLIC_API_URL=https://api.tanny.ai
-
 RUN corepack enable pnpm && pnpm run build
 
 # Production image, copy all the files and run next
