@@ -1,13 +1,11 @@
 name: Production
 
 on:
-    push:
-        branches:
-            - master
+    workflow_dispatch:
 
 concurrency:
     group: production-deployment
-    cancel-in-progress: false
+    cancel-in-progress: true
 
 jobs:
     docker:
